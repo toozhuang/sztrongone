@@ -1,1 +1,5 @@
 .DS_Store
+
+# Backend runtime data
+backend/data/uploads/
+backend/data/*.db
