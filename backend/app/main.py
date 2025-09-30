@@ -9,6 +9,8 @@ from app.routers.deposits import router as deposits_router
 from app.routers.maturity_reminders import router as maturity_reminders_router
 from app.routers.files import router as files_router
 from app.routers.ocr import router as ocr_router
+from app.routers.ocr_templates import router as ocr_templates_router
+from app.routers.deposit_drafts import router as deposit_drafts_router
 from app.routers.reports import router as reports_router
 
 app = FastAPI(title="Home Assets API")
@@ -33,4 +35,6 @@ app.include_router(deposits_router, prefix="/deposits", tags=["deposits"])
 app.include_router(maturity_reminders_router, prefix="/maturity-reminders", tags=["maturity_reminders"])
 app.include_router(files_router, prefix="/files", tags=["files"])
 app.include_router(ocr_router, prefix="/ocr", tags=["ocr"])
+app.include_router(ocr_templates_router, prefix="/ocr/templates", tags=["ocr_templates"])
+app.include_router(deposit_drafts_router, prefix="/deposit-drafts", tags=["deposit_drafts"])
 app.include_router(reports_router, prefix="/reports", tags=["reports"])
